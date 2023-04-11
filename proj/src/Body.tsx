@@ -1,12 +1,11 @@
 import React from 'react'
+import Projects from './body/Projects'
 
 function Body() {
   return (
-    <>
-        <div className='bg-[#576CBC] '>
-            Body
-        </div>
-    </>
+    <div className='flex justify-center'>
+        <Projects/>
+    </div>
   )
 }
 

@@ -22,14 +22,17 @@ export default function Navigation() {
 
 
         <div className='hidden md:flex'> 
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900 px-10">
+          <a href="#" className="text-sm font-semibold leading-6 text-gray-900 px-7">
             Projects
           </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900 px-10">
-            Contact Me
-          </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900 px-10">
+          <a href="#" className="text-sm font-semibold leading-6 text-gray-900 px-7">
             Current Work
+          </a>
+          <a href="#" className="text-sm font-semibold leading-6 text-gray-900 px-7">
+            Blog
+          </a>
+          <a href="#" className="text-sm font-semibold leading-6 text-gray-900 px-7">
+            Hobbies
           </a>
         </div>
 
@@ -85,13 +88,19 @@ export default function Navigation() {
                   href="#"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  Contact Me
+                  Current Work
                 </a>
                 <a
                   href="#"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  Current Work
+                  Blog
+                </a>
+                <a
+                  href="#"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  Hobbies
                 </a>
               </div>
               <div className="py-6">
