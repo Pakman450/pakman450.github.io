@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import Navigation from './Navigation'
+import Body from './Body'
+import Footer from './Footer'
 
 
 function App() {
@@ -10,6 +12,8 @@ function App() {
         
     <div className="App ">
     <Navigation/>
+    <Body/>
+    <Footer/>
 
 
     </div>

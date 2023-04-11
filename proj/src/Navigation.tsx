@@ -5,17 +5,18 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 
+import HomeImg from "./assets/Home.png"
+
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
     <header className="bg-[#BBE1FA]">
-      <nav className="flex items-center justify-between py-1 px-10" aria-label="Global">
+      <nav className="flex items-center justify-between py-5 px-10" aria-label="Global">
         <div className=''>
-          <a href="#" className="-m-1.5 p-1.5">
-            <span className="sr-only">Your Company</span>
-            <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
+          <a href="#" className="border-gray-500">
+            <img className="h-8 w-auto" src={HomeImg} alt="" />
           </a>
         </div>
 
