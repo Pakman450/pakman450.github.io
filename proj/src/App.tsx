@@ -7,8 +7,9 @@ function App() {
 
   return (
     <>
-        <Navigation/>
-    <div className="App">
+        
+    <div className="App ">
+    <Navigation/>
 
 
     </div>
