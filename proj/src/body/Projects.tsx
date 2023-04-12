@@ -4,7 +4,16 @@ import React from 'react'
 function Projects() {
   return (
     <>
-        <div>Projects</div>
+        <div className=''>
+          Projects
+          Projects
+          Projects
+          Projects
+          Projects
+          Projects
+          Projects
+          Projects
+          </div>
     </>
   )
 }

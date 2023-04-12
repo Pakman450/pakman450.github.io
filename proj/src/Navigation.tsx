@@ -13,7 +13,7 @@ export default function Navigation() {
 
   return (
     <header className="bg-[#BBE1FA] rounded-lg m-2 drop-shadow-md sticky">
-      <nav className="flex items-center justify-between py-5 px-10 " aria-label="Global">
+      <nav className="flex items-center justify-between py-5 px-20 " aria-label="Global">
         
         <div className='h-8 w-8'>
           <a href="#" className="border-gray-500">
@@ -23,16 +23,23 @@ export default function Navigation() {
 
 
         <div className='hidden md:flex'> 
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900 px-4">
+          <a href="#" className="text-sm font-semibold leading-6 text-gray-900 p-2 mx-4 border border-transparent
+           hover:border-blue-400 hover:border hover:rounded-md hover:bg-[#0B2447] hover:text-white ">
             Projects
           </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900 px-4">
+
+          <a href="#" className="text-sm font-semibold leading-6 text-gray-900 p-2 mx-4 border border-transparent 
+          hover:border-blue-400 hover:border hover:rounded-md	hover:bg-[#0B2447] hover:text-white">
             Current Work
           </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900 px-4">
+
+          <a href="#" className="text-sm font-semibold leading-6 text-gray-900 p-2 mx-4 border border-transparent 
+          hover:border-blue-400 hover:border hover:rounded-md	hover:bg-[#0B2447] hover:text-white">
             Blog
           </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900 px-4">
+
+          <a href="#" className="text-sm font-semibold leading-6 text-gray-900 p-2 mx-4 border border-transparent 
+          hover:border-blue-400 hover:border hover:rounded-md	hover:bg-[#0B2447] hover:text-white">
             Hobbies
           </a>
         </div>
