@@ -12,26 +12,27 @@ export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="bg-[#BBE1FA]">
-      <nav className="flex items-center justify-between py-5 px-10" aria-label="Global">
-        <div className=''>
+    <header className="bg-[#BBE1FA] rounded-lg m-2 drop-shadow-md sticky">
+      <nav className="flex items-center justify-between py-5 px-10 " aria-label="Global">
+        
+        <div className='h-8 w-8'>
           <a href="#" className="border-gray-500">
-            <img className="h-8 w-auto" src={HomeImg} alt="" />
+            <img className="h-8 w-8" src={HomeImg} alt="" />
           </a>
         </div>
 
 
         <div className='hidden md:flex'> 
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900 px-7">
+          <a href="#" className="text-sm font-semibold leading-6 text-gray-900 px-4">
             Projects
           </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900 px-7">
+          <a href="#" className="text-sm font-semibold leading-6 text-gray-900 px-4">
             Current Work
           </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900 px-7">
+          <a href="#" className="text-sm font-semibold leading-6 text-gray-900 px-4">
             Blog
           </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900 px-7">
+          <a href="#" className="text-sm font-semibold leading-6 text-gray-900 px-4">
             Hobbies
           </a>
         </div>
@@ -52,6 +53,7 @@ export default function Navigation() {
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
+
       </nav>
 
       <Dialog as="div" className="md:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
