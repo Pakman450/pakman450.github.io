@@ -1,11 +1,18 @@
 import React from 'react'
 import Projects from './body/Projects'
+import Landing from './body/Landing'
 
 function Body() {
   return (
-    <div className='flex justify-center'>
+    <>
+      <div className='m-2'>      
+      
+        <Landing/>
         <Projects/>
-    </div>
+      </div>
+
+    </>
+
   )
 }
 

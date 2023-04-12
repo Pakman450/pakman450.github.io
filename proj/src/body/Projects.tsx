@@ -5,15 +5,9 @@ function Projects() {
   return (
     <>
         <div className=''>
-          Projects
-          Projects
-          Projects
-          Projects
-          Projects
-          Projects
-          Projects
-          Projects
-          </div>
+          <>
+          </>
+        </div>
     </>
   )
 }
