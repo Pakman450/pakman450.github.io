@@ -12,8 +12,8 @@ export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="bg-[#BBE1FA] rounded-lg m-2 drop-shadow-md  sticky">
-      <nav className="flex items-center justify-between py-5 pl-20 pr-10 md:pr-20 " aria-label="Global">
+    <header className="bg-[#BBE1FA] rounded-lg m-2 drop-shadow-md">
+      <nav className="flex items-center justify-between py-5 pl-10 pr-10 md:px-20 sticky" aria-label="Global">
         
         <div className='h-8 w-8'>
           <a href="#" className="border-gray-500">
