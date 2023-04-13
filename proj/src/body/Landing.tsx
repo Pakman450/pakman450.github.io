@@ -12,7 +12,7 @@ function Landing() {
                 <h1 className='mb-2'>
                     Hello! My name is, 
                 </h1>
-                <h2 className='m-2 text-8xl'>
+                <h2 className='m-2 text-2xl md:text-8xl'>
                     Steven Pak
                 </h2>
                 <h2 className='mt-2'>
