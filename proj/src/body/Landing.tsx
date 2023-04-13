@@ -6,7 +6,7 @@ const heightNum: number = 160
 function Landing() {
   return (
     <>
-        <div className=' pl-20 py-20  drop-shadow-md rounded-lg flex text-white bg-[#19376D]'>
+        <div className=' pl-20 py-20  drop-shadow-md rounded-lg md:flex text-white bg-[#19376D]'>
 
             <div className={`h-${heightNum}px w-${widthNum}px`}>            
                 <h1 className='mb-2'>
@@ -20,7 +20,13 @@ function Landing() {
                 </h2>
             </div>
 
-            <div className={`grid place-content-center h-${heightNum}px w-${widthNum}px`}>
+            <div className={`hidden md:grid md:place-content-center h-${heightNum}px w-${widthNum}px`}>
+                <div className={`pl-5`}>
+                    lol
+                </div>
+            </div>
+
+            <div className={`h-${heightNum}px w-${widthNum}px`}>
                 <div className={`pl-5`}>
                     lol
                 </div>
