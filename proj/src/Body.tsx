@@ -5,8 +5,7 @@ import Landing from './body/Landing'
 function Body() {
   return (
     <>
-      <div className='m-2  flex  justify-center'>      
-      
+      <div className='m-2 grid justify-items-center'>      
         <Landing/>
         <Projects/>
       </div>

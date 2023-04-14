@@ -6,7 +6,7 @@ import githubImg from "../assets/github-mark-white.png"
 function Landing() {
   return (
     <>
-        <div className='py-20  w-full drop-shadow-md grid justify-center max-w-7xl rounded-lg md:px-20 md:flex text-white bg-[#19376D]'>
+        <div className='py-20 w-full grid justify-center max-w-7xl rounded-lg md:px-20 md:flex text-white bg-[#19376D] drop-shadow-2xl '>
 
             <div className={`h-${heightNum}px w-${widthNum}px md:grid md:place-content-center grid justify-items-center`}>            
                 <h1 className='mb-2 text-center md:text-lg'>
