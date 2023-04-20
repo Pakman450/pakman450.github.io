@@ -23,7 +23,7 @@ export default function Navigation() {
           </div>
 
           <div className='hidden md:flex'> 
-            <a href="#" className="text-sm font-semibold leading-6 text-gray-900 p-2 mx-4 border border-transparent
+            <a href="#PROJECTS" className="text-sm font-semibold leading-6 text-gray-900 p-2 mx-4 border border-transparent
             hover:border-blue-400 hover:border hover:rounded-md hover:bg-[#0B2447] hover:text-white ">
               Projects
             </a>
