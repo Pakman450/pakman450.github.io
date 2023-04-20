@@ -1,4 +1,3 @@
-// min-[375px]:w-[30rem] sm:w-[40rem] md:
 function Projects() {
   return (
     <>
