@@ -4,7 +4,7 @@ function Projects() {
     <>
         
         <div id='PROJECTS' className=' w-full grid justify-center max-w-7xl rounded-lg my-2 py-20 px-10 text-white bg-[#576CBC] drop-shadow-2xl'>
-          <div className="flex justify-center mb-5">
+          <div className="flex mb-5">
             <h1 className="text-2xl">
               Projects
             </h1>

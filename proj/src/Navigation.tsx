@@ -12,9 +12,9 @@ export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <div className='flex justify-center'>
+    <div className='flex justify-center sticky top-0 z-50'>
       <header className=" m-2 w-[80rem] max-w-7xl bg-[#BBE1FA] rounded-lg drop-shadow-md ">
-        <nav className="flex justify-between items-center py-5 pl-5 pr-5 md:px-10 lg:px-20" aria-label="Global">
+        <nav className="flex justify-between items-center py-5 pl-5 pr-5 md:px-10 lg:px-20 " aria-label="Global">
           
           <div className='h-8 w-8'>
             <a href="#" className=" border-gray-500">
