@@ -13,9 +13,7 @@ export default function Navigation() {
 
   function toggleNavBar(){
     const navBarEl: HTMLElement | null = document.getElementById("navbar")
-
     navBarEl.classList.toggle("hidden")
- 
   }
 
   return (
