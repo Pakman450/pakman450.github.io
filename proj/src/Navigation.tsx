@@ -19,8 +19,8 @@ export default function Navigation() {
   }
 
   return (
-    <div className='flex justify-center sticky top-0 z-50'>
-      <header id='navbar'className=" m-2 w-[80rem] max-w-7xl bg-[#BBE1FA] rounded-lg drop-shadow-md  ">
+    <div className='flex justify-center sticky top-0 z-50 w-screen'>
+      <header id='navbar' className=" m-2  w-[85%] bg-[#BBE1FA] rounded-lg drop-shadow-md  ">
         <nav className="flex justify-between items-center py-5 pl-5 pr-5 md:px-10 lg:px-20 " aria-label="Global">
           
           <div className='h-8 w-8'>
