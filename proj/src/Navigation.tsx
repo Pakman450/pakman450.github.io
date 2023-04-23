@@ -28,9 +28,9 @@ export default function Navigation() {
           </div>
 
           <div className='hidden md:flex'> 
-            <a href="#PROJECTS" className="text-sm font-semibold leading-6 text-gray-900 p-2 mx-4 border border-transparent
+            <a href="#pastPROJECTS" className="text-sm font-semibold leading-6 text-gray-900 p-2 mx-4 border border-transparent
             hover:border-blue-400 hover:border hover:rounded-md hover:bg-[#0B2447] hover:text-white ">
-              Projects
+              Past Projects
             </a>
 
             <a href="#" className="text-sm font-semibold leading-6 text-gray-900 p-2 mx-4 border border-transparent 
@@ -105,7 +105,7 @@ export default function Navigation() {
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
                   <a
-                    href="#PROJECTS"
+                    href="#pastPROJECTS"
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                     onClick={() => {
                       setMobileMenuOpen(false);

@@ -1,4 +1,3 @@
-
 const widthNum: number = 398.281
 const heightNum: number = 160
 import githubImg from "../assets/github-mark-white.png"
@@ -10,16 +9,19 @@ import "./bodyStyles.css"
 function Landing() {
   return (
     <>
-        <div className='py-20 w-full max-w-7xl rounded-lg  bg-[#19376D]/50 drop-shadow-2xl '>
+        <div className='py-20 w-full max-w-7xl rounded-lg bg-[#19376D]/50 drop-shadow-2xl '>
             <div className="grid justify-center md:px-20 md:flex">
-                <div className={`h-${heightNum}px w-${widthNum}px md:grid md:place-content-center grid justify-items-center font-mono text-white`}>            
-                    <h1 className='mb-2 text-center md:text-lg'>
-                        Hello! My name is, 
+                <div className={`h-${heightNum}px w-${widthNum}px md:grid md:place-content-center grid font-mono text-white text-left`}>            
+                    <h1 className='mb-2 md:text-lg'>
+                        <span className="text-6xl">
+                            Hello!
+                        </span>
+                        My name is, 
                     </h1>
-                    <h2 className='m-2 text-center text-7xl'>
+                    <h2 className='my-2 text-7xl'>
                         Steven Pak
                     </h2>
-                    <h2 className='mt-2 text-center md:text-lg'>
+                    <h2 className='mt-2 md:text-lg'>
                         I focus on computational drug design. 
                     </h2>
                 </div>

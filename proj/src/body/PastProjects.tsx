@@ -1,11 +1,11 @@
-function Projects() {
+function PastProjects() {
   return (
     <>
         
-        <div id='PROJECTS' className=' w-full grid justify-center max-w-7xl rounded-lg my-2 py-20 px-10 text-white bg-[#576CBC] drop-shadow-2xl'>
+        <div id='pastPROJECTS' className=' w-full grid justify-center max-w-7xl rounded-lg my-2 py-20 px-10 text-white bg-[#576CBC] drop-shadow-2xl'>
           <div className="flex mb-5">
             <h1 className="text-7xl font-mono">
-              Projects
+              Past Projects
             </h1>
           </div>
           
@@ -41,4 +41,4 @@ function Projects() {
   )
 }
 
-export default Projects
+export default PastProjects

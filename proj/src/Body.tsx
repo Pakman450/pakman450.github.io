@@ -1,5 +1,5 @@
 import React from 'react'
-import Projects from './body/Projects'
+import PastProjects from './body/PastProjects'
 import Landing from './body/Landing'
 
 function Body() {
@@ -7,7 +7,7 @@ function Body() {
     <>
       <div className='m-2 grid justify-items-center'>      
         <Landing/>
-        <Projects/>
+        <PastProjects/>
       </div>
 
     </>
