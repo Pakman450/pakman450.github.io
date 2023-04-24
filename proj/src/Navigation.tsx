@@ -21,9 +21,10 @@ export default function Navigation() {
       <header id='navbar' className=" m-2  w-[70%] max-w-7xl bg-[#BBE1FA] rounded-lg drop-shadow-md  ">
         <nav className="flex justify-between items-center py-5 pl-5 pr-5 md:px-10 lg:px-20 " aria-label="Global">
           
-          <div className='h-8 w-8'>
-            <a href="#" className=" border-gray-500">
-              <img className="h-full w-full" src={HomeImg} alt="" />
+          <div className='border-black'>
+            <a href="#" className="">
+              {/* <img className="h-full w-full" src={HomeImg} alt="" /> */}
+              PAK
             </a>
           </div>
 
