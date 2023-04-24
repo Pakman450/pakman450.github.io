@@ -10,15 +10,16 @@ function Landing() {
   return (
     <>
         <div className='py-20 w-full max-w-7xl rounded-lg bg-[#19376D]/50 drop-shadow-2xl '>
-            <div className="grid justify-center md:px-20 md:flex">
-                <div className={`h-${heightNum}px w-${widthNum}px md:grid md:place-content-center grid font-mono text-white text-left`}>            
+            <div className="grid justify-center md:justify-evenly md:px-20 md:flex">
+
+                <div className={`h-${heightNum}px w-${widthNum}px md:grid md:place-content-center grid font-mono text-white text-left px-5`}>            
                     <h1 className='mb-2 md:text-lg'>
-                        <span className="text-2xl md:text-6xl">
+                        <span className="text-4xl sm:text-5xl md:text-6xl">
                             Hello! 
                         </span>
                         My name is, 
                     </h1>
-                    <h2 className='my-2 text-2xl md:text-7xl'>
+                    <h2 className='my-2 text-5xl sm:text-6xl md:text-7xl lg:text-8xl'>
                         Steven Pak
                     </h2>
                     <h2 className='mt-2 text-md md:text-lg'>
@@ -26,33 +27,35 @@ function Landing() {
                     </h2>
                 </div>
 
-                <div className={`hidden md:grid md:place-content-center h-${heightNum}px w-${widthNum}px`}>
-                    <div className="ml-5 w-72 h-72 border-black rounded-lg border-4">
+                <div className={`hidden md:flex md:justify-center p-5 w-3/4 h-96`}>
+                    <div className="w-full min-w-[16rem] h-full border-black rounded-lg border-4">
                         <model-viewer src={viewmodel} auto-rotate rotation-per-second={`30deg`} camera-controls touch-action={"pan-y"}/>
                     </div>
                 </div>
 
-                <div className={`md:hidden flex justify-center my-5 h-${heightNum}px w-${widthNum}px`}>
-                    <div className=" w-64 h-64 border-black rounded-lg border-4">
+                <div className={`md:hidden flex justify-center my-5 p-5`}>
+                    <div className="w-full h-64 border-black rounded-lg border-4">
                         <model-viewer src={viewmodel} auto-rotate rotation-per-second={`30deg`} camera-controls touch-action={"pan-y"}/>
                     </div>
                 </div>
             </div>
 
-            <div className="grid justify-center p-5 md:flex">
-                <button className="border-black border-2 rounded-md p-5 mt-10 md:mr-5 text-3xl md:text-4xl flex hover:border-blue-400 hover:rounded-md hover:bg-white">
-                    Check out my github! 
-                    <a href={githubWeb} className="mx-4  w-10 h-auto">
-                        <img src={githubImg}/>
-                    </a>
-                </button>
+            <div className="md:flex md:justify-evenly grid justify-items-center p-5">
+                <a href={githubWeb} >
+                    <button className="border-black border-2 rounded-md p-5 mt-10 md:mr-5 flex hover:border-blue-400 hover:rounded-md hover:bg-white">
+                        
+                        <h1 className="self-center">Check out my github!</h1>
+                        <img className="mx-4 w-10 h-auto " src={githubImg}/>
 
-                <button className="border-black border-2 rounded-md p-5 mt-10 md:ml-5 text-3xl md:text-4xl flex hover:border-blue-400 hover:rounded-md hover:bg-white">
-                    Contact me!
-                    <a href={githubWeb} className="mx-4 w-10 h-auto">
-                        <img src={githubImg}/>
-                    </a>
-                </button>
+                    </button>
+                </a>
+
+                <a href={githubWeb} >
+                    <button className="border-black border-2 rounded-md p-5 mt-10 md:ml-5 flex hover:border-blue-400 hover:rounded-md hover:bg-white">
+                        <h1 className="self-center">Contact me.</h1>
+                        <img className="mx-4 w-10 h-auto" src={githubImg}/>
+                    </button>
+                </a>
             </div>
 
         </div>
