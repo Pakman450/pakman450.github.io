@@ -42,17 +42,17 @@ function Landing() {
 
             <div className="md:flex md:justify-evenly grid justify-items-center p-5">
                 <a href={githubWeb} >
-                    <button className="border-black border-2 rounded-md p-5 mt-10 md:mr-5 flex hover:border-blue-400 hover:rounded-md hover:bg-white">
+                    <button className="bg-black border-black border-2 rounded-md p-5 mt-10 md:mr-5 flex hover:border-blue-400 hover:rounded-md hover:bg-white">
                         
-                        <h1 className="self-center">Check out my github!</h1>
+                        <h1 className="self-center text-4xl">Check out my github!</h1>
                         <img className="mx-4 w-10 h-auto " src={githubImg}/>
 
                     </button>
                 </a>
 
                 <a href={githubWeb} >
-                    <button className="border-black border-2 rounded-md p-5 mt-10 md:ml-5 flex hover:border-blue-400 hover:rounded-md hover:bg-white">
-                        <h1 className="self-center">Contact me.</h1>
+                    <button className="bg-black border-black border-2 rounded-md p-5 mt-10 md:ml-5 flex hover:border-blue-400 hover:rounded-md hover:bg-white">
+                        <h1 className="self-center text-4xl">Contact me.</h1>
                         <img className="mx-4 w-10 h-auto" src={githubImg}/>
                     </button>
                 </a>
