@@ -3,9 +3,22 @@ import PastProjects from './body/PastProjects'
 import Landing from './body/Landing'
 
 function Body() {
+  // const observer = new IntersectionObserver( (entries) => {
+  //   entries.forEach((entry)=>{
+  //     console.log(entry)
+  //     if (entry.isIntersecting){
+  //       entry.target.classList.add('show')
+  //     }else{
+  //       entry.target.classList.remove('show')
+  //     }
+  //   })
+  // })
+  // // const bodyElements = document.getElementById('body')
+  // // bodyElements.forEach((e1)=> observer.observe(e1))
+
   return (
     <>
-      <div className='m-2 grid justify-items-center'>      
+      <div id="body" className='m-2 grid justify-items-center'>      
         <Landing/>
         <PastProjects/>
       </div>

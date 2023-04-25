@@ -9,7 +9,7 @@ import "./bodyStyles.css"
 function Landing() {
   return (
     <>
-        <div className='py-20 w-full max-w-7xl rounded-lg bg-[#19376D]/50 drop-shadow-2xl '>
+        <div className='transition duration-200 opacity-0 hover:opacity-100 py-20 w-full max-w-7xl rounded-lg'>
             <div className="grid justify-center md:justify-evenly md:px-20 md:flex">
 
                 <div className={`h-${heightNum}px w-${widthNum}px md:grid md:place-content-center grid font-mono text-white text-left px-5`}>            
@@ -28,13 +28,13 @@ function Landing() {
                 </div>
 
                 <div className={`hidden md:flex md:justify-center p-5 w-3/4 h-96`}>
-                    <div className="w-full min-w-[16rem] h-full border-black rounded-lg border-4">
+                    <div className="w-full min-w-[16rem] h-full border-slate-800 rounded-lg border-4">
                         <model-viewer src={viewmodel} auto-rotate rotation-per-second={`30deg`} camera-controls touch-action={"pan-y"}/>
                     </div>
                 </div>
 
                 <div className={`md:hidden flex justify-center my-5 p-5`}>
-                    <div className="w-full h-64 border-black rounded-lg border-4">
+                    <div className="w-full h-64 border-slate-800  rounded-lg border-4">
                         <model-viewer src={viewmodel} auto-rotate rotation-per-second={`30deg`} camera-controls touch-action={"pan-y"}/>
                     </div>
                 </div>
@@ -42,7 +42,7 @@ function Landing() {
 
             <div className="md:flex md:justify-evenly grid justify-items-center p-5">
                 <a href={githubWeb} >
-                    <button className="bg-black border-black border-2 rounded-md p-5 mt-10 md:mr-5 flex hover:border-blue-400 hover:rounded-md hover:bg-white">
+                    <button className=" text-white border-white border-2 rounded-md p-5 mt-10 md:mr-5 flex hover:rounded-md hover:bg-white hover:text-black">
                         
                         <h1 className="self-center text-4xl">Check out my github!</h1>
                         <img className="mx-4 w-10 h-auto " src={githubImg}/>
@@ -51,7 +51,7 @@ function Landing() {
                 </a>
 
                 <a href={githubWeb} >
-                    <button className="bg-black border-black border-2 rounded-md p-5 mt-10 md:ml-5 flex hover:border-blue-400 hover:rounded-md hover:bg-white">
+                    <button className="text-white border-white border-2 rounded-md p-5 mt-10 md:ml-5 flex  hover:rounded-md hover:bg-white hover:text-black">
                         <h1 className="self-center text-4xl">Contact me.</h1>
                         <img className="mx-4 w-10 h-auto" src={githubImg}/>
                     </button>

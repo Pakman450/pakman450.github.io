@@ -19,7 +19,7 @@ export default function Navigation() {
   return (
     <div className='flex justify-center sticky top-0 z-50 w-screen'>
       <header id='navbar' className=" m-2  w-[70%] max-w-7xl bg-[#BBE1FA] rounded-lg drop-shadow-md  ">
-        <nav className="flex justify-between items-center py-5 pl-5 pr-5 md:px-10 lg:px-20 " aria-label="Global">
+        <nav className="flex justify-between items-center p-5 md:px-10 lg:px-20 " aria-label="Global">
           
           <div className='border-black'>
             <a href="#" className="">
@@ -29,7 +29,7 @@ export default function Navigation() {
           </div>
 
           <div className='hidden md:flex'> 
-            <a href="#pastPROJECTS" className="text-sm font-semibold leading-6 text-gray-900 p-2 mx-4 border border-transparent
+            <a href="#pastprojects" className="text-sm font-semibold leading-6 text-gray-900 p-2 mx-4 border border-transparent
             hover:border-blue-400 hover:border hover:rounded-md hover:bg-[#0B2447] hover:text-white ">
               Past Projects
             </a>
@@ -106,7 +106,7 @@ export default function Navigation() {
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
                   <a
-                    href="#pastPROJECTS"
+                    href="#pastprojects"
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                     onClick={() => {
                       setMobileMenuOpen(false);
