@@ -23,7 +23,7 @@ function PastProjects() {
   return (
     <>          
 
-        <div ref={ref} id="pastprojects" className='transitions duration-300 translate-x-[-50%] opacity-0 w-full grid justify-center max-w-7xl rounded-lg my-2 p-5 text-white bg-[#576CBC] drop-shadow-2xl'>
+        <div ref={ref} id="pastprojects" className='transitions duration-300 translate-x-[-50%] opacity-0 w-full grid justify-center max-w-7xl rounded-lg my-2 p-5 text-white drop-shadow-2xl'>
           <div className="mt-2 ml-2">
             <h1 className="text-4xl md:text-7xl font-mono">
             Past Projects
