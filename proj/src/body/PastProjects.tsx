@@ -1,8 +1,29 @@
+import { useState, useRef, useEffect } from "react";
+
 function PastProjects() {
+  const [isIntersecting, setIsIntersecting] = useState(false);
+  const ref = useRef(null);
+  useEffect(() => {
+  const observer = new IntersectionObserver(([entry]) => {
+      setIsIntersecting(entry.isIntersecting);
+  },{threshold: 0.25});
+  console.log(isIntersecting);
+  const el = document.getElementById("pastprojects")
+  if (isIntersecting){
+      el.classList.add("opacity-100")
+      el.classList.add("translate-x-[0]")
+  }else{
+      el.classList.remove("opacity-100")
+      el.classList.remove("translate-x-[0]")
+  }
+  observer.observe(ref.current);
+  return () => observer.disconnect();
+  }, [isIntersecting]);
+
   return (
     <>          
 
-        <div className='opacity-0 w-full grid justify-center max-w-7xl rounded-lg my-2 p-5 text-white bg-[#576CBC] drop-shadow-2xl'>
+        <div ref={ref} id="pastprojects" className='transitions duration-300 translate-x-[-50%] opacity-0 w-full grid justify-center max-w-7xl rounded-lg my-2 p-5 text-white bg-[#576CBC] drop-shadow-2xl'>
           <div className="mt-2 ml-2">
             <h1 className="text-4xl md:text-7xl font-mono">
             Past Projects

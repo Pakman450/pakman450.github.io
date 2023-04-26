@@ -1,15 +1,38 @@
-const widthNum: number = 398.281
-const heightNum: number = 160
 import githubImg from "../assets/github-mark-white.png"
-let githubWeb = 'https://github.com/Pakman450'
 import '@google/model-viewer/dist/model-viewer'
 import viewmodel from '../assets/spike2.glb'
 import "./bodyStyles.css"
+import { useState, useRef, useEffect } from "react";
+
+const widthNum: number = 398.281
+const heightNum: number = 160
+let githubWeb = 'https://github.com/Pakman450'
+
 
 function Landing() {
+    const [isIntersecting, setIsIntersecting] = useState(false);
+    const ref = useRef(null);
+    useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => {
+        setIsIntersecting(entry.isIntersecting);
+    },{threshold: 0.5});
+    console.log(isIntersecting);
+    const el = document.getElementById("landing")
+    if (isIntersecting){
+        el.classList.add("opacity-100")
+        el.classList.add("translate-x-[0]")
+    }else{
+        el.classList.remove("opacity-100")
+        el.classList.remove("translate-x-[0]")
+    }
+    observer.observe(ref.current);
+    return () => observer.disconnect();
+    }, [isIntersecting]);
+
+
   return (
     <>
-        <div className='transition duration-200 opacity-0 hover:opacity-100 py-20 w-full max-w-7xl rounded-lg'>
+        <div ref={ref} id="landing"  className='transitions duration-300 translate-x-[-50%] opacity-0 py-20 w-full max-w-7xl rounded-lg'>
             <div className="grid justify-center md:justify-evenly md:px-20 md:flex">
 
                 <div className={`h-${heightNum}px w-${widthNum}px md:grid md:place-content-center grid font-mono text-white text-left px-5`}>            
