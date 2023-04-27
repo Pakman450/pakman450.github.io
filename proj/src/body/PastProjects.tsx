@@ -2,12 +2,12 @@ import { useState, useRef, useEffect } from "react";
 
 function PastProjects() {
   const [isIntersecting, setIsIntersecting] = useState(false);
-  const ref = useRef(null);
+  const ref: any = useRef(null);
   useEffect(() => {
   const observer = new IntersectionObserver(([entry]) => {
       setIsIntersecting(entry.isIntersecting);
   },{threshold: 0.25});
-  const el = document.getElementById("pastprojects")
+  const el: any = document.getElementById("pastprojects")
   if (isIntersecting){
       el.classList.add("opacity-100")
       el.classList.add("translate-x-[0]")

@@ -3,12 +3,12 @@ import { useState, useRef, useEffect } from "react";
 
 function Background() {
     const [isIntersecting, setIsIntersecting] = useState(false);
-    const ref = useRef(null);
+    const ref: any = useRef(null);
     useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
         setIsIntersecting(entry.isIntersecting);
     },{threshold: 0.05});
-    const el = document.getElementById("background")
+    const el: any = document.getElementById("background")
     if (isIntersecting){
         el.classList.add("opacity-100")
         el.classList.add("translate-x-[0]")
@@ -78,8 +78,12 @@ function Background() {
                     <h1 className='md:text-5xl md:mb-4 underline underline-offset-4'>Research Experience</h1> 
                         <div className='mt-2 ml-5 '>
                             <h2 className='md:text-4xl leading-snug'>
-                            <button className='text-yellow-200 transition duration-150 ease-in-out hover:scale-110 hover:text-indigo-500' 
-                                       href="https://ringo.ams.stonybrook.edu/~rizzo/StonyBrook/index.html"> The Rizzo Lab </button>
+                            <a href="https://ringo.ams.stonybrook.edu/~rizzo/StonyBrook/index.html">
+                                <button className='text-yellow-200 transition duration-150 ease-in-out hover:scale-110 hover:text-indigo-500' 
+                                        > The Rizzo Lab 
+                                        </button>
+                            </a>
+
                             </h2>
                             <h2 className='text-sm md:text-2xl  leading-snug'>
                                 Professor: Robert Rizzo
@@ -92,14 +96,19 @@ function Background() {
                             </h2>
                             <ul className='pl-10 list-disc text-sm md:text-xl'>
                                 <li className=''>Collaborate with lab members to continuously maintain and develop <span></span> 
-                                    <button className='text-yellow-200 transition duration-150 ease-in-out hover:scale-110 hover:text-indigo-500' 
-                                       href="https://dock.compbio.ucsf.edu/DOCK_6/index.htm"> DOCK6 </button> <span></span> 
+                                    <a href="https://dock.compbio.ucsf.edu/DOCK_6/index.htm">                                    
+                                        <button className='text-yellow-200 transition duration-150 ease-in-out hover:scale-110 hover:text-indigo-500' 
+                                       > DOCK6 </button>
+                                       </a>
+                                    <span> </span> 
                                     software
                                     </li>
                                 <li className='my-2'>Developed a QED and synthetic accessibility score calculator in C++ programming language</li>
                                 <li className='my-2'>Augmented the current <span></span> 
-                                <button className='text-yellow-200 transition duration-150 ease-in-out hover:scale-110 hover:text-indigo-500' 
-                                       href="https://dock.compbio.ucsf.edu/DOCK_6/index.htm"> DOCK6 </button> <span></span> 
+                                <a href="https://dock.compbio.ucsf.edu/DOCK_6/index.htm">                                    
+                                        <button className='text-yellow-200 transition duration-150 ease-in-out hover:scale-110 hover:text-indigo-500' 
+                                       > DOCK6 </button>
+                                       </a><span> </span> 
                                        virtual screening protocol to mitigate complications and workflow from the past protocol version</li>
                                 <li className=''>Ran a large-scale virtual screening on SGL1 to identify potent molecules</li>
                             </ul>
@@ -107,8 +116,11 @@ function Background() {
 
                         <div className='mt-5 ml-5'>
                             <h2 className='md:text-4xl leading-snug'>
-                                <button className='text-yellow-200 transition duration-150 ease-in-out hover:scale-110 hover:text-indigo-500' 
-                                       href="https://www.mskcc.org/research/ski/labs/derek-tan"> The Derek Tan Lab </button>
+                                <a href="https://www.mskcc.org/research/ski/labs/derek-tan">
+                                    <button className='text-yellow-200 transition duration-150 ease-in-out hover:scale-110 hover:text-indigo-500' 
+                                        > The Derek Tan Lab </button>
+                                </a>
+
                             </h2>
                             <h2 className='text-sm md:text-2xl leading-snug'>
                                 Professor: Derek Tan
@@ -130,8 +142,11 @@ function Background() {
 
                         <div className='mt-5 ml-5'>
                             <h2 className=' md:text-4xl leading-snug'>
-                            <button className='text-yellow-200 transition duration-150 ease-in-out hover:scale-110 hover:text-indigo-500' 
-                                       href="https://sites.google.com/view/tanaji-talele-laboratory?pli=1"> Tanaji T. Talele's lab </button>
+                            <a href="https://sites.google.com/view/tanaji-talele-laboratory?pli=1">
+                                <button className='text-yellow-200 transition duration-150 ease-in-out hover:scale-110 hover:text-indigo-500' 
+                                        > Tanaji T. Talele's lab </button>
+                            </a>
+
                             </h2>
                             <h2 className='text-sm md:text-2xl leading-snug'>
                                 Professor: Tanaji Talele

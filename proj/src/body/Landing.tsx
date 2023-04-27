@@ -1,6 +1,7 @@
 import githubImg from "../assets/github-mark-white.svg"
 import emailImg from "../assets/email.svg"
-import '@google/model-viewer/dist/model-viewer'
+import '@google/model-viewer/dist/model-viewer' 
+// @ts-ignore  
 import viewmodel from '../assets/spike2.glb'
 import "./bodyStyles.css"
 import { useState, useRef, useEffect } from "react";
@@ -12,12 +13,12 @@ let githubWeb = 'https://github.com/Pakman450'
 
 function Landing() {
     const [isIntersecting, setIsIntersecting] = useState(false);
-    const ref = useRef(null);
+    const ref: any= useRef(null);
     useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
         setIsIntersecting(entry.isIntersecting);
     },{threshold: 0.25});
-    const el = document.getElementById("landing")
+    const el: any = document.getElementById("landing")
     if (isIntersecting){
         el.classList.add("opacity-100")
         el.classList.add("translate-x-[0]")

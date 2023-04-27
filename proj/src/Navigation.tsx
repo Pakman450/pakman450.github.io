@@ -12,7 +12,7 @@ export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   function toggleNavBar(){
-    const navBarEl: HTMLElement | null = document.getElementById("navbar")
+    const navBarEl: any = document.getElementById("navbar")
     navBarEl.classList.toggle("hidden")
   }
 
