@@ -1,6 +1,6 @@
 {
-  "homepage" : "https://pakman450.github.io/blog/",
-  "name": "stevenpak",
+  "homepage" : "https://pakman450.github.io/proj",
+  "name": "proj",
   "private": true,
   "version": "0.0.0",
   "type": "module",
