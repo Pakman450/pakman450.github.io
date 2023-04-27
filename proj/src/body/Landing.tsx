@@ -32,10 +32,10 @@ function Landing() {
 
   return (
     <>
-        <div ref={ref} id="landing"  className='transitions duration-300 translate-x-[-50%] opacity-0 py-20 w-full max-w-7xl rounded-lg'>
+        <div ref={ref} id="landing"  className='transitions duration-300 translate-x-[-50%] opacity-0 py-20 w-full max-w-7xl'>
             <div className="grid justify-center md:justify-evenly md:px-20 md:flex">
 
-                <div className={`h-${heightNum}px w-${widthNum}px md:grid md:place-content-center grid font-mono text-white text-left px-5`}>            
+                <div className={`h-${heightNum}px w-${widthNum}px md:grid md:place-content-center grid text-white text-left px-5`}>            
                     <h1 className='mb-2 md:text-lg'>
                         <span className="text-4xl sm:text-5xl md:text-6xl">
                             Hello! 

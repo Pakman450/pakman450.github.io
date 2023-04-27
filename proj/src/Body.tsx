@@ -6,7 +6,7 @@ import Background from './body/Background'
 function Body() {
   return (
     <>
-      <div id="body" className='m-2 grid justify-items-center'>      
+      <div id="body" className='m-2 grid justify-items-center font-mono'>      
         <Landing/>
         <Background/>
         <PastProjects/>

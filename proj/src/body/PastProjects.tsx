@@ -23,14 +23,14 @@ function PastProjects() {
   return (
     <>          
 
-        <div ref={ref} id="pastprojects" className='transitions duration-300 translate-x-[-50%] opacity-0 w-full grid justify-center max-w-7xl rounded-lg my-2 p-5 text-white drop-shadow-2xl'>
+        <div ref={ref} id="pastprojects" className='transitions duration-300 translate-x-[-50%] opacity-0 w-full max-w-7xl my-2 p-5 text-white'>
           <div className="mt-2 ml-2">
-            <h1 className="text-4xl md:text-7xl font-mono">
+            <h1 className="text-4xl md:text-7xl">
             Past Projects
             </h1>
           </div>
 
-          <div className=' w-full grid justify-center max-w-7xl rounded-lg my-2 p-10 md:p-20 text-white bg-slate-800 drop-shadow-2xl'>
+          <div className=' w-full grid justify-center max-w-7xl rounded-lg my-2 p-10 md:p-20 text-white bg-slate-800'>
             <div className=" snap-x flex snap-mandatory bg-white space-x-10 rounded-lg p-5 md:p-10 min-w-full max-w-4xl overflow-y-hidden">
 
               <div className="snap-center bg-black  grid min-w-[90%] h-80 place-items-center text-8xl">
