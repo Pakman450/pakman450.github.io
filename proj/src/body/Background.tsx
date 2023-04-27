@@ -8,7 +8,6 @@ function Background() {
     const observer = new IntersectionObserver(([entry]) => {
         setIsIntersecting(entry.isIntersecting);
     },{threshold: 0.05});
-    console.log(isIntersecting);
     const el = document.getElementById("background")
     if (isIntersecting){
         el.classList.add("opacity-100")

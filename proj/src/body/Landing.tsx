@@ -16,7 +16,6 @@ function Landing() {
     const observer = new IntersectionObserver(([entry]) => {
         setIsIntersecting(entry.isIntersecting);
     },{threshold: 0.25});
-    console.log(isIntersecting);
     const el = document.getElementById("landing")
     if (isIntersecting){
         el.classList.add("opacity-100")
@@ -32,7 +31,7 @@ function Landing() {
 
   return (
     <>
-        <div ref={ref} id="landing"  className='transitions duration-300 translate-x-[-50%] opacity-0 py-20 w-full md:h-screen max-w-7xl'>
+        <div ref={ref} id="landing"  className='transitions duration-300 translate-x-[-50%] opacity-0 py-20 w-full md:h-screen max-w-7xl grid content-evenly'>
             <div className="grid justify-center md:justify-evenly md:px-20 md:flex">
 
                 <div className={`h-${heightNum}px w-${widthNum}px md:grid md:place-content-center grid text-white text-left px-5`}>            
@@ -40,7 +39,7 @@ function Landing() {
                         <span className="text-4xl sm:text-5xl md:text-6xl">
                             Hello! 
                         </span>
-                        My name is, 
+                        <span> </span>My name is, 
                     </h1>
                     <h2 className='my-2 text-5xl sm:text-6xl md:text-7xl lg:text-8xl'>
                         Steven Pak
@@ -65,7 +64,7 @@ function Landing() {
 
             <div className="md:flex md:justify-evenly grid justify-items-center p-5">
                 <a href={githubWeb} >
-                    <button className=" text-white border-white border-2 rounded-md p-5 mt-10 md:mr-5 flex hover:rounded-md hover:bg-white hover:text-black">
+                    <button className=" text-white border-white border-2 rounded-md p-5 mb-5 md:mb-0 md:mr-5 flex hover:rounded-md hover:bg-white hover:text-black">
                         
                         <h1 className="self-center text-4xl">Check out my github!</h1>
                         <img className="mx-4 w-10 h-auto " src={githubImg}/>
@@ -74,7 +73,7 @@ function Landing() {
                 </a>
 
                 <a href={githubWeb} >
-                    <button className="text-white border-white border-2 rounded-md p-5 mt-10 md:ml-5 flex  hover:rounded-md hover:bg-white hover:text-black">
+                    <button className="text-white border-white border-2 rounded-md p-5 mt-5 md:mt-0 md:ml-5 flex  hover:rounded-md hover:bg-white hover:text-black">
                         <h1 className="self-center text-4xl">Contact me.</h1>
                         <img className="mx-4 w-10 h-auto" src={githubImg}/>
                     </button>

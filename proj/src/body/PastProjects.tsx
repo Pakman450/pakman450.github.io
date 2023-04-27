@@ -7,7 +7,6 @@ function PastProjects() {
   const observer = new IntersectionObserver(([entry]) => {
       setIsIntersecting(entry.isIntersecting);
   },{threshold: 0.25});
-  console.log(isIntersecting);
   const el = document.getElementById("pastprojects")
   if (isIntersecting){
       el.classList.add("opacity-100")
