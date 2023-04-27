@@ -15,7 +15,7 @@ function Landing() {
     useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
         setIsIntersecting(entry.isIntersecting);
-    },{threshold: 0.5});
+    },{threshold: 0.25});
     console.log(isIntersecting);
     const el = document.getElementById("landing")
     if (isIntersecting){
@@ -32,7 +32,7 @@ function Landing() {
 
   return (
     <>
-        <div ref={ref} id="landing"  className='transitions duration-300 translate-x-[-50%] opacity-0 py-20 w-full max-w-7xl'>
+        <div ref={ref} id="landing"  className='transitions duration-300 translate-x-[-50%] opacity-0 py-20 w-full md:h-screen max-w-7xl'>
             <div className="grid justify-center md:justify-evenly md:px-20 md:flex">
 
                 <div className={`h-${heightNum}px w-${widthNum}px md:grid md:place-content-center grid text-white text-left px-5`}>            

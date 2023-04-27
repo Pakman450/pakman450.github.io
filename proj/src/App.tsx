@@ -12,7 +12,7 @@ function App() {
         
     <div className="App bg-black">
 
-    <Navigation/>
+    {/* <Navigation/> */}
     <Body/>
     <Footer/>
     
