@@ -9,7 +9,7 @@ function Body() {
       <div id="body" className='grid justify-items-center font-mono'>      
         <Landing/>
         <Background/>
-        <PastProjects/>
+        {/* <PastProjects/> */}
       </div>
 
     </>

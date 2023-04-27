@@ -4,3 +4,11 @@ model-viewer {
     height: 100%;
     background: black;
 }
+
+#github_button:hover #githubIcon {
+    filter: invert(100%) !important;
+  }
+
+#email_button:hover #emailIcon {
+filter: invert(0%) !important;
+}

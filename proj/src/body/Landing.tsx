@@ -1,4 +1,5 @@
-import githubImg from "../assets/github-mark-white.png"
+import githubImg from "../assets/github-mark-white.svg"
+import emailImg from "../assets/email.svg"
 import '@google/model-viewer/dist/model-viewer'
 import viewmodel from '../assets/spike2.glb'
 import "./bodyStyles.css"
@@ -64,18 +65,22 @@ function Landing() {
 
             <div className="md:flex md:justify-evenly grid justify-items-center p-5">
                 <a href={githubWeb} >
-                    <button className=" text-white border-white border-2 rounded-md p-5 mb-5 md:mb-0 md:mr-5 flex hover:rounded-md hover:bg-white hover:text-black">
-                        
-                        <h1 className="self-center text-4xl">Check out my github!</h1>
-                        <img className="mx-4 w-10 h-auto " src={githubImg}/>
-
+                    <button id="github_button" className="flex items-center text-white border-white border-2 rounded-md p-5 mb-5 
+                    md:mb-0 md:mr-5
+                    hover:rounded-md hover:bg-white hover:text-black
+                    
+                    ">     
+                        <h1 className="text-4xl">Check out my github</h1>
+                        <img id="githubIcon" className="ml-4 grid justify-center w-10 h-auto" src={githubImg}/>
                     </button>
+
+                    
                 </a>
 
-                <a href={githubWeb} >
-                    <button className="text-white border-white border-2 rounded-md p-5 mt-5 md:mt-0 md:ml-5 flex  hover:rounded-md hover:bg-white hover:text-black">
-                        <h1 className="self-center text-4xl">Contact me.</h1>
-                        <img className="mx-4 w-10 h-auto" src={githubImg}/>
+                <a href="mailto:steven.pak@stonybrook.edu" >
+                    <button id="email_button" className="text-white border-white border-2 rounded-md p-5 mt-5 flex md:mt-0 md:ml-5  hover:rounded-md hover:bg-white hover:text-black">
+                            <h1 className="self-center text-4xl">Contact me</h1>
+                            <img id="emailIcon" className="ml-4 grid justify-center w-10 h-auto invert" src={emailImg}/>
                     </button>
                 </a>
             </div>
