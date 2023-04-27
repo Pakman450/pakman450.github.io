@@ -1,8 +1,10 @@
 {
-  "name": "proj",
+  "name": "stevenpak",
+  "homepage": "https://username.github.io/blog/proj",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
