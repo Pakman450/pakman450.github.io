@@ -38,6 +38,7 @@ function Projects() {
           date: 'Apr 06, 2023',
           datetime: '2023-04-06',
           category: { title: 'Molecular Database', href: '#' },
+          imagepath: ''
         //   author: {
         //     name: 'Steven Pak',
         //     role: 'Co-Founder / CTO',
@@ -57,6 +58,7 @@ function Projects() {
             date: 'Apr 06, 2023',
             datetime: '2023-04-06',
             category: { title: 'Molecular Docking Programs', href: '#' },
+            imagepath: ''
           },
           {
             id: 3,
@@ -67,19 +69,42 @@ function Projects() {
             date: 'Apr 06, 2023',
             datetime: '2023-04-06',
             category: { title: 'Molecular Processing Software', href: '#' },
+            imagepath: ''
           },
           {
             id: 4,
-            title: 'Mol2dbg',
-            href: 'https://google.com',
+            title: 'Descriptor-Driven De Novo Design Algorithms for DOCK6 using RDKit',
+            href: '',
             description:
-              'Mol2db is a python-based software to interface with your mol2-based molecular library database on a linux-based command line. \
-              The database utitlizes psql to organize and store your mol2 molecules. Instead of storing your mol2 molecules into a multi-mol2 file format, \
-              which can be in the order of millions of molecules, \
-              you can store them in a SQL-based database by using mol2db commands.',
+              'ABSTRACT: Structure-based methods that employ principles of de novo design can be used to construct\
+              small organic molecules from-scratch, using pre-existing fragment libraries to sample chemical space,\
+              and are an important class of computational algorithms for drug-lead discovery. Here, we present a\
+              powerful new design method for DOCK6 that employs a Descriptor Driven De Novo strategy (termed\
+              D3N) in which user-defined cheminformatics descriptors (and their target ranges) are calculated at each\
+              layer of growth using the open-source toolkit RDKit. The objective is to tailor ligand growth towards\
+              desirable regions of chemical space. The approach was extensively validated through: (1) comparison\
+              of cheminformatics descriptors computed using the new DOCK6/RDKit interface versus the standard\
+              Python/RDKit installation, (2) examination of descriptor distributions generated using D3N growth\
+              under different conditions (target ranges and environments), and (3) construction of ligands with very\
+              tight (pinpoint) descriptor ranges using clinical-relevant compounds as a reference. Our testing confirms\
+              that the new DOCK6/RDkit integration is robust, showcases how DOCK6_D3N routines can be used to\
+              direct sampling around user-defined chemical spaces, and highlights the power of on-the-fly descriptor\
+              calculations for ligand design to important drug targets.',
             date: 'Apr 06, 2023',
             datetime: '2023-04-06',
-            category: { title: 'Molecular Database', href: '#' },
+            category: { title: 'Publication on JCIM', href: '#' },
+            imagepath: './src/assets/.png'
+          },
+          {
+            id: 5,
+            title: 'Isosteric swapping on molecular docking in DOCK6',
+            href: '',
+            description:
+              '...',
+            date: 'Apr 06, 2023',
+            datetime: '2023-04-06',
+            category: { title: 'on-going work', href: '#' },
+            imagepath: './src/assets/.png'
           },
       ]
   return (
@@ -87,20 +112,21 @@ function Projects() {
         <div id="projects" ref={ref} className="transitions duration-300 translate-x-[-50%] opacity-0 w-full max-w-7xl my-2 px-5">
             <div className="my-2 ml-2 text-white">
                 <h1 className="text-4xl md:text-7xl text-left">
-                    Contributed Projects
+                    Projects and Publications
                 </h1>
             </div>
             <div className="mx-auto grid justify-items-center max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
                 {posts.map((post) => (
                     <div key={post.id} className='group/card'>
-                        <article className="flex max-w-xl flex-col items-start justify-between border-white rounded-2xl border-2 p-5 
+                        <article className="transition duration-300 ease-in-out flex max-w-xl flex-col items-start justify-between border-white rounded-2xl border-2 p-5 
                         group-hover/card:bg-white "
                         >
-                            <div  className='group/button my-2 text-white'>
+                            <div  className='group/button  my-2 text-white'>
                                 <a href={post.href}> 
-                                    <button className='transition duration-150 ease-in-out hover:scale-150 text-xl font-semibold text-white border-white border-2 rounded-full px-3 py-1.5
+                                    <button className='transition duration-150 ease-in-out hover:scale-150 text-xl line-clamp-2 leading-5 font-semibold text-white border-white border-2 rounded-full px-3 py-1.5
                                         group-hover/card:text-black group-hover/card:bg-white group-hover/card:border-black group-hover/card:animate-button-pulse
-                                        group-hover/button:text-white group-hover/button:bg-lime-500' 
+                                        group-hover/button:text-white group-hover/button:bg-lime-500
+                                        ' 
                                     > {post.title}</button>                                   
                                 </a>
                             </div>
@@ -118,14 +144,24 @@ function Projects() {
                                 </div>
                             </div>
 
+                            {/* If the image path is empty show the model viewer */}
+                            {
+                                post.imagepath === "" ? 
+                                <div className="w-full h-48 border-slate-800 rounded-lg border-4 group-hover/card:animate-border-pulse">
+                                    <model-viewer src={viewmodel} auto-rotate rotation-per-second={`30deg`} camera-controls touch-action={"pan-y"}/>
+                                </div>    
+                                :
+                                <div className="z-10 w-full h-full border-slate-800 rounded-lg border-4 group-hover/card:animate-border-pulse
+                                transition duration-150 ease-in-out hover:scale-150"
+                                >
+                                    <img src={post.imagepath}/>
+                                </div>
 
-                            <div className="w-full h-48 border-slate-800 rounded-lg border-4 group-hover/card:animate-border-pulse">
-                                <model-viewer src={viewmodel} auto-rotate rotation-per-second={`30deg`} camera-controls touch-action={"pan-y"}/>
-                            </div>
-
-
+                            
+                            }
                             <div className="">
-                                <p className="mt-5 line-clamp-4 text-md leading-6 text-white group-hover/card:text-black">{post.description}</p>
+                                <p className="mt-5 text-md leading-6 text-white group-hover/card:text-black text-justify line-clamp-4 group-hover/card:line-clamp-none"
+                                >{post.description}</p>
                             </div>
                             {/* <div className="relative mt-8 flex items-center gap-x-4">
                                 <img src={post.author.imageUrl} alt="" className="h-10 w-10 rounded-full" />
