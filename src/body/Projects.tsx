@@ -2,6 +2,7 @@ import React from 'react'
 
 import { useState, useRef, useEffect } from "react";
 import '@google/model-viewer/dist/model-viewer';
+// @ts-ignore 
 import viewmodel from '../assets/spike2.glb'
 
 
