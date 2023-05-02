@@ -13,6 +13,7 @@ function Projects() {
     const observer = new IntersectionObserver(([entry]) => {
         setIsIntersecting(entry.isIntersecting);
     },{threshold: 0.10});
+
     const el: any = document.getElementById("projects")
     if (isIntersecting){
         el.classList.add("opacity-100")
@@ -20,11 +21,40 @@ function Projects() {
     }else{
         el.classList.remove("opacity-100")
         el.classList.remove("translate-x-[0]")
-
     }
+
     observer.observe(el);
     return () => observer.disconnect();
     }, [isIntersecting]);
+
+    const observer = new IntersectionObserver((entries)=>{
+        let delayArr: number[] = []
+        let delayStart: number = 0
+        for (let i: number = 0; i<entries.length; i++){
+            delayArr.push(delayStart)
+            delayStart += 5000
+        }
+
+
+        entries.forEach(((entry, index, entries)=>{
+                if (entry.isIntersecting){
+                    entry.target.classList.add("opacity-100")
+                    entry.target.classList.add("translate-x-[0]")
+                    entry.target.classList.add("delay-["+delayArr[index]+"ms]")    
+
+                }else{
+                    entry.target.classList.remove("opacity-100")
+                    entry.target.classList.remove("translate-x-[0]")
+                    entry.target.classList.remove("delay-["+delayArr[index]+"ms]")   
+                }
+            }))  
+
+
+    },{threshold: 0.50});
+
+    const hiddenElements = document.querySelectorAll('section')
+    hiddenElements.forEach((el)=>observer.observe(el))
+    // observer.observe(hiddenElements)
 
     const posts = [
         {
@@ -37,11 +67,11 @@ function Projects() {
             which can be in the order of millions of molecules, \
             you can store them in a SQL-based database by using mol2db commands.',
           category: { title: 'Molecular Database', href: '#' },
-          imagepath: ''
+          imagepath: '',
         },
         {
             id: 2,
-            title: 'DOCK6 (contributor)',
+            title: 'DOCK6 (developer)',
             href: 'https://dock.compbio.ucsf.edu/DOCK_6/index.htm',
             description:
               'DOCK6 is molecular modeling program used to identify potential binding geometries and interactions \
@@ -57,7 +87,7 @@ function Projects() {
             description:
               "Datamol is a python library to work with molecules. It's a layer built on top of RDKit and aims to be as light as possible.",
             category: { title: 'Molecular Processing Software', href: '#' },
-            imagepath: ''
+            imagepath: '',
           },
         //   {
         //     id: 4,
@@ -90,7 +120,7 @@ function Projects() {
         //     category: { title: 'on-going work', href: '#' },
         //     imagepath: './src/assets/isosteric.png'
         //   },
-      ]
+    ]
   return (
     <>
         <div id="projects" ref={ref} className="transitions duration-300 translate-x-[-50%] opacity-0 w-full max-w-7xl my-2 px-5">
@@ -100,9 +130,10 @@ function Projects() {
                 </h1>
             </div>
             <div className="mx-auto grid justify-items-center max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-                {posts.map((post) => (
-                    <div key={post.id} className='group/card hover:scale-125 hover:z-50'>
-                        <article className="transition duration-300 ease-in-out flex max-w-xl flex-col items-start justify-between border-white rounded-2xl border-2 p-5 bg-zinc-900
+                {
+                posts.map((post) => (
+                    <section id={(post.id).toString()} key={post.id} className='transitions duration-300 translate-x-[-50%] opacity-0 group/card hover:scale-125 hover:z-50'>
+                        <article className="transition duration-150 ease-in-out flex max-w-xl flex-col items-start justify-between border-white rounded-2xl border-2 p-5 bg-zinc-900
                         group-hover/card:bg-slate-200 "
                         >
                             <div  className='group/button  my-2 text-white'>
@@ -137,15 +168,13 @@ function Projects() {
                                 >
                                     <img src={post.imagepath}/>
                                 </div>
-
-                            
                             }
                             <div className="">
                                 <p className="mt-5 text-md leading-6 text-white group-hover/card:text-black text-justify line-clamp-4 group-hover/card:line-clamp-none"
                                 >{post.description}</p>
                             </div>
                         </article>
-                    </div>
+                    </section>
 
                 ))}
             </div>
