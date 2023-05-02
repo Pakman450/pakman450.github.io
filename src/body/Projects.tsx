@@ -27,34 +27,33 @@ function Projects() {
     return () => observer.disconnect();
     }, [isIntersecting]);
 
-    const observer = new IntersectionObserver((entries)=>{
-        let delayArr: number[] = []
-        let delayStart: number = 0
-        for (let i: number = 0; i<entries.length; i++){
-            delayArr.push(delayStart)
-            delayStart += 5000
-        }
-
-
-        entries.forEach(((entry, index, entries)=>{
+    const observerCards = new IntersectionObserver((entries)=>{
+        entries.forEach(((entry)=>{
                 if (entry.isIntersecting){
                     entry.target.classList.add("opacity-100")
                     entry.target.classList.add("translate-x-[0]")
-                    entry.target.classList.add("delay-["+delayArr[index]+"ms]")    
 
                 }else{
                     entry.target.classList.remove("opacity-100")
                     entry.target.classList.remove("translate-x-[0]")
-                    entry.target.classList.remove("delay-["+delayArr[index]+"ms]")   
                 }
             }))  
-
-
-    },{threshold: 0.50});
+    },{threshold: 0.25});
 
     const hiddenElements = document.querySelectorAll('section')
-    hiddenElements.forEach((el)=>observer.observe(el))
-    // observer.observe(hiddenElements)
+
+    // for (let i: number = 0; i<hiddenElements.length; i++){
+    //     let delayArr: number[] = [100,300,700]
+    //     let delayStart: number = 0
+    //     // for (let i: number = 0; i<hiddenElements.length; i++){
+    //     //     delayArr.push(delayStart)
+    //     //     delayStart += 500
+    //     // }
+    //     hiddenElements.forEach((el,index,arr)=>{
+    //         el.classList.add("delay-"+delayArr[index])
+    //     })
+    // }
+    hiddenElements.forEach((el)=>observerCards.observe(el))
 
     const posts = [
         {
@@ -123,8 +122,8 @@ function Projects() {
     ]
   return (
     <>
-        <div id="projects" ref={ref} className="transitions duration-300 translate-x-[-50%] opacity-0 w-full max-w-7xl my-2 px-5">
-            <div className="my-2 ml-2 text-white">
+        <div  ref={ref} className="w-full max-w-7xl my-2 px-5">
+            <div id="projects" className="transitions duration-500 translate-x-[-50%] opacity-0 my-2 ml-2 text-white">
                 <h1 className="text-4xl md:text-7xl text-left">
                     Projects and Publications
                 </h1>
@@ -132,8 +131,8 @@ function Projects() {
             <div className="mx-auto grid justify-items-center max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
                 {
                 posts.map((post) => (
-                    <section id={(post.id).toString()} key={post.id} className='transitions duration-300 translate-x-[-50%] opacity-0 group/card hover:scale-125 hover:z-50'>
-                        <article className="transition duration-150 ease-in-out flex max-w-xl flex-col items-start justify-between border-white rounded-2xl border-2 p-5 bg-zinc-900
+                    <section key={post.id} className='transitions duration-1000 translate-x-[-50%] opacity-0 group/card hover:z-50'>
+                        <article className="transitions duration-300 flex max-w-xl flex-col items-start justify-between hover:scale-125  border-white rounded-2xl border-2 p-5 bg-zinc-900
                         group-hover/card:bg-slate-200 "
                         >
                             <div  className='group/button  my-2 text-white'>
