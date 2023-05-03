@@ -71,11 +71,11 @@ function Projects() {
             which can be in the order of millions of molecules, \
             you can store them in a SQL-based database by using mol2db commands.',
           category: { title: 'Molecular Database', href: '#' },
-          imagepath: '',
-          delay: 'delay-100'
+          imagepath: './src/assets/github-mark-white.svg',
+          delay: 'md:delay-100'
         },
         {
-            id: 3,
+            id: 2,
             title: 'DOCK6 (developer)',
             href: 'https://dock.compbio.ucsf.edu/DOCK_6/index.htm',
             description:
@@ -83,18 +83,18 @@ function Projects() {
               of a molecule to a target. Specifically, docking is the identification of the low-energy binding modes \
               of a small molecule, or ligand, within the active site of a macromolecule, or receptor, whose structure is known. ',
             category: { title: 'Molecular Docking Programs', href: '#' },
-            imagepath: '',
-            delay: 'delay-300'
+            imagepath: 'https://ringo.ams.stonybrook.edu/images/1/1c/Pose_Reproduction_Intro.JPG',
+            delay: 'md:delay-[300ms]'
           },
           {
-            id: 7,
+            id: 3,
             title: 'datamol (contributor)',
             href: 'https://github.com/datamol-io/datamol',
             description:
               "Datamol is a python library to work with molecules. It's a layer built on top of RDKit and aims to be as light as possible.",
             category: { title: 'Molecular Processing Software', href: '#' },
-            imagepath: '',
-            delay: 'delay-700'
+            imagepath: './src/assets/github-mark-white.svg',
+            delay: 'md:delay-[600ms]'
 
           },
         //   {
@@ -119,15 +119,16 @@ function Projects() {
         //     category: { title: 'Publication on JCIM', href: '#' },
         //     imagepath: './src/assets/.png'
         //   },
-        //   {
-        //     id: 5,
-        //     title: 'Isosteric swapping on molecular docking in DOCK6',
-        //     href: '',
-        //     description:
-        //       '...',
-        //     category: { title: 'on-going work', href: '#' },
-        //     imagepath: './src/assets/isosteric.png'
-        //   },
+          {
+            id: 4,
+            title: 'Isosteric swapping on molecular docking in DOCK6',
+            href: '',
+            description:
+              '...',
+            category: { title: 'on-going work', href: '#' },
+            imagepath: "",
+            modelpath: './src/assets/iso.glb',
+            delay: 'md:delay-[900ms]'          },
     ]
   return (
     <>
@@ -141,7 +142,7 @@ function Projects() {
                 {
                 posts.map((post) => ( 
                         <section key={post.id} className={`transitions ${post.delay} duration-1000 ease-in-out  -translate-x-[50%] opacity-0 group/card hover:z-50`}>
-                            <article className="transitions duration-300 flex max-w-xl flex-col items-start justify-between hover:scale-125  border-white rounded-2xl border-2 p-5 bg-zinc-900
+                            <article className="transitions duration-300 flex max-w-xl flex-col items-start justify-between md:hover:scale-125  border-white rounded-2xl border-2 p-5 bg-zinc-900
                             group-hover/card:bg-slate-200 "
                             >
                                 <div  className='group/button  my-2 text-white'>
@@ -168,13 +169,13 @@ function Projects() {
                                 {
                                     post.imagepath === "" ? 
                                     <div className="w-full h-48 border-slate-800 rounded-lg border-4 group-hover/card:animate-border-pulse">
-                                        <model-viewer src={viewmodel} auto-rotate rotation-per-second={`30deg`} camera-controls touch-action={"pan-y"}/>
+                                        <model-viewer src={post.modelpath} auto-rotate rotation-per-second={`30deg`} camera-controls touch-action={"pan-y"}/>
                                     </div>    
                                     :
-                                    <div className="z-10 w-full h-full border-slate-800 rounded-lg border-4 group-hover/card:animate-border-pulse
-                                    transition duration-150 ease-in-out hover:scale-150 hover:z-50"
+                                    <div className="z-10 w-full h-48 grid place-content-center bg-black border-slate-800 rounded-lg border-4 group-hover/card:animate-border-pulse
+                                    transition duration-150 ease-in-out"
                                     >
-                                        <img src={post.imagepath}/>
+                                        <img className="w-full h-auto" src={post.imagepath}/>
                                     </div>
                                 }
                                 <div className="">
