@@ -2,7 +2,7 @@ import githubImg from "../assets/github-mark-white.svg"
 import emailImg from "../assets/email.svg"
 import '@google/model-viewer/dist/model-viewer' 
 // @ts-ignore  
-import viewmodel from '../assets/spike2.glb'
+import viewmodel from '../assets/iso.glb'
 import "./bodyStyles.css"
 import { useState, useRef, useEffect } from "react";
 
