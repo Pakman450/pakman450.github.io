@@ -6,7 +6,12 @@ import '@google/model-viewer/dist/model-viewer';
 import viewmodel from '../assets/spike2.glb'
 
 
+
 function Projects() {
+
+    const STAGGER = 100
+    const duration = {enter: 500, exit: 300}
+
     const [isIntersecting, setIsIntersecting] = useState(false);
     const ref: any = useRef(null);
     useEffect(() => {
@@ -31,11 +36,11 @@ function Projects() {
         entries.forEach(((entry)=>{
                 if (entry.isIntersecting){
                     entry.target.classList.add("opacity-100")
-                    entry.target.classList.add("translate-x-[0]")
+                    entry.target.classList.add("translate-x-[0%]")
 
                 }else{
                     entry.target.classList.remove("opacity-100")
-                    entry.target.classList.remove("translate-x-[0]")
+                    entry.target.classList.remove("translate-x-[0%]")
                 }
             }))  
     },{threshold: 0.25});
@@ -67,9 +72,10 @@ function Projects() {
             you can store them in a SQL-based database by using mol2db commands.',
           category: { title: 'Molecular Database', href: '#' },
           imagepath: '',
+          delay: 'delay-100'
         },
         {
-            id: 2,
+            id: 3,
             title: 'DOCK6 (developer)',
             href: 'https://dock.compbio.ucsf.edu/DOCK_6/index.htm',
             description:
@@ -77,16 +83,19 @@ function Projects() {
               of a molecule to a target. Specifically, docking is the identification of the low-energy binding modes \
               of a small molecule, or ligand, within the active site of a macromolecule, or receptor, whose structure is known. ',
             category: { title: 'Molecular Docking Programs', href: '#' },
-            imagepath: ''
+            imagepath: '',
+            delay: 'delay-300'
           },
           {
-            id: 3,
+            id: 7,
             title: 'datamol (contributor)',
             href: 'https://github.com/datamol-io/datamol',
             description:
               "Datamol is a python library to work with molecules. It's a layer built on top of RDKit and aims to be as light as possible.",
             category: { title: 'Molecular Processing Software', href: '#' },
             imagepath: '',
+            delay: 'delay-700'
+
           },
         //   {
         //     id: 4,
@@ -130,51 +139,50 @@ function Projects() {
             </div>
             <div className="mx-auto grid justify-items-center max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
                 {
-                posts.map((post) => (
-                    <section key={post.id} className='transitions duration-1000 translate-x-[-50%] opacity-0 group/card hover:z-50'>
-                        <article className="transitions duration-300 flex max-w-xl flex-col items-start justify-between hover:scale-125  border-white rounded-2xl border-2 p-5 bg-zinc-900
-                        group-hover/card:bg-slate-200 "
-                        >
-                            <div  className='group/button  my-2 text-white'>
-                                <a href={post.href}> 
-                                    <button className='transition duration-150 ease-in-out hover:scale-150 text-xl line-clamp-2 leading-5 font-semibold bg-slate-700 text-white border-white border-2 rounded-full px-3 py-1.5
-                                        group-hover/card:text-black group-hover/card:bg-white group-hover/card:border-black group-hover/card:animate-button-pulse
-                                        group-hover/button:text-white group-hover/button:bg-lime-500
-                                        ' 
-                                    > {post.title}</button>                                   
-                                </a>
-                            </div>
-
-
-                            <div className="flex items-center gap-x-4 text-xs ">
-                                <div
-                                className="z-10 px-3 py-1.5 font-medium text-white 
-                                group-hover/card:text-black
-                                ">
-                                    {post.category.title}
+                posts.map((post) => ( 
+                        <section key={post.id} className={`transitions ${post.delay} duration-1000 ease-in-out  -translate-x-[50%] opacity-0 group/card hover:z-50`}>
+                            <article className="transitions duration-300 flex max-w-xl flex-col items-start justify-between hover:scale-125  border-white rounded-2xl border-2 p-5 bg-zinc-900
+                            group-hover/card:bg-slate-200 "
+                            >
+                                <div  className='group/button  my-2 text-white'>
+                                    <a href={post.href}> 
+                                        <button className='transition duration-150 ease-in-out hover:scale-150 text-xl line-clamp-2 leading-5 font-semibold bg-slate-700 text-white border-white border-2 rounded-full px-3 py-1.5
+                                            group-hover/card:text-black group-hover/card:bg-white group-hover/card:border-black group-hover/card:animate-button-pulse
+                                            group-hover/button:text-white group-hover/button:bg-lime-500
+                                            ' 
+                                        > {post.title}</button>                                   
+                                    </a>
                                 </div>
-                            </div>
 
-                            {/* If the image path is empty show the model viewer */}
-                            {
-                                post.imagepath === "" ? 
-                                <div className="w-full h-48 border-slate-800 rounded-lg border-4 group-hover/card:animate-border-pulse">
-                                    <model-viewer src={viewmodel} auto-rotate rotation-per-second={`30deg`} camera-controls touch-action={"pan-y"}/>
-                                </div>    
-                                :
-                                <div className="z-10 w-full h-full border-slate-800 rounded-lg border-4 group-hover/card:animate-border-pulse
-                                transition duration-150 ease-in-out hover:scale-150 hover:z-50"
-                                >
-                                    <img src={post.imagepath}/>
+
+                                <div className="flex items-center gap-x-4 text-xs ">
+                                    <div
+                                    className="z-10 px-3 py-1.5 font-medium text-white 
+                                    group-hover/card:text-black
+                                    ">
+                                        {post.category.title}
+                                    </div>
                                 </div>
-                            }
-                            <div className="">
-                                <p className="mt-5 text-md leading-6 text-white group-hover/card:text-black text-justify line-clamp-4 group-hover/card:line-clamp-none"
-                                >{post.description}</p>
-                            </div>
-                        </article>
-                    </section>
 
+                                {/* If the image path is empty show the model viewer */}
+                                {
+                                    post.imagepath === "" ? 
+                                    <div className="w-full h-48 border-slate-800 rounded-lg border-4 group-hover/card:animate-border-pulse">
+                                        <model-viewer src={viewmodel} auto-rotate rotation-per-second={`30deg`} camera-controls touch-action={"pan-y"}/>
+                                    </div>    
+                                    :
+                                    <div className="z-10 w-full h-full border-slate-800 rounded-lg border-4 group-hover/card:animate-border-pulse
+                                    transition duration-150 ease-in-out hover:scale-150 hover:z-50"
+                                    >
+                                        <img src={post.imagepath}/>
+                                    </div>
+                                }
+                                <div className="">
+                                    <p className="mt-5 text-md leading-6 text-white group-hover/card:text-black text-justify line-clamp-4 group-hover/card:line-clamp-none"
+                                    >{post.description}</p>
+                                </div>
+                            </article>
+                        </section>
                 ))}
             </div>
         </div>
