@@ -71,7 +71,7 @@ function Projects() {
             which can be in the order of millions of molecules, \
             you can store them in a SQL-based database by using mol2db commands.',
           category: { title: 'Molecular Database', href: '#' },
-          imagepath: './src/assets/github-mark-white.svg',
+          imagepath: '/github-mark-white.svg',
           delay: 'md:delay-100'
         },
         {
@@ -93,7 +93,7 @@ function Projects() {
             description:
               "Datamol is a python library to work with molecules. It's a layer built on top of RDKit and aims to be as light as possible.",
             category: { title: 'Molecular Processing Software', href: '#' },
-            imagepath: './src/assets/github-mark-white.svg',
+            imagepath: '/github-mark-white.svg',
             delay: 'md:delay-[600ms]'
 
           },
@@ -127,8 +127,9 @@ function Projects() {
               '...',
             category: { title: 'on-going work', href: '#' },
             imagepath: "",
-            modelpath: './src/assets/iso.glb',
-            delay: 'md:delay-[900ms]'          },
+            modelpath: '/iso.glb',
+            delay: 'md:delay-[900ms]'          
+        },
     ]
   return (
     <>
