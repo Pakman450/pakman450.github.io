@@ -64,7 +64,7 @@ function Projects() {
         {
           id: 1,
           title: 'mol2db (founder/contributor)',
-          href: 'https://github.com/Pakman450/mol2db',
+          href: 'https://github.com/rizzolab/mol2db',
           description:
             'Mol2db is a python-based software to interface with your mol2-based molecular library database on a linux-based command line. \
             The database utitlizes psql to organize and store your mol2 molecules. Instead of storing your mol2 molecules into a multi-mol2 file format, \
